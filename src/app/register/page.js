@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
+
+
+
 export default function FormRegister() {
   const [form, setForm] = useState({
     txt_firstname: "",
@@ -41,7 +44,7 @@ export default function FormRegister() {
           title: `บันทึกสำเร็จ (status: ${response.status})`,
           text: "สมัครสมาชิกเรียบร้อย",
           confirmButtonText: "ตกลง",
-          confirmButtonColor: "#3094d6",
+          confirmButtonColor: "#0099ff",
         });
       } else if (response.status === 400) {
         await Swal.fire({
@@ -49,7 +52,7 @@ export default function FormRegister() {
           title: `เกิดข้อผิดพลาด (status: ${response.status})`,
           text: result.message || "ข้อมูลไม่ถูกต้อง",
           confirmButtonText: "ตกลง",
-          confirmButtonColor: "#ed8c43",
+          confirmButtonColor: "#ff6e00",
         });
       }
     } catch (error) {
@@ -58,7 +61,9 @@ export default function FormRegister() {
         title: "เกิดข้อผิดพลาด",
         text: "ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้",
         confirmButtonText: "ตกลง",
-        confirmButtonColor: "#900000",
+        confirmButtonColor: "#cc0707",
+
+        
       });
     }
   };

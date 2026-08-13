@@ -4,7 +4,22 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="bg-blue-600 text-white shadow">
+   
+ <nav className="flex gap-6 bg-[#3b2418] p-5 text-[#f1e5cf]">
+
+      <Link href="/">
+        Home
+      </Link>
+
+      <Link href="/user">
+        User
+      </Link>
+
+      <Link href="/register">
+        Register
+      </Link>
+       
+
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
 
